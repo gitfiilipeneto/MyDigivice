@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import api from '../apiCall/Request.js'
 
 const StyledContainer = styled.div`
 width:100vw;
@@ -17,6 +18,9 @@ font-size: 96px;
 const HeroSection = () => {
     return(
         <StyledContainer>
+            <ul>
+                <li>pokemon name:</li>
+            </ul>
             <styledH1>Oi</styledH1>
         </StyledContainer>
     )

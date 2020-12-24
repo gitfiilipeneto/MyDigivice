@@ -7,12 +7,14 @@
 //     return json
 //     })
 // }
-// call usando fetch
 
-import axios from 'axios'
+import React, { Component } from 'react'
 
-const api = axios.create({
-    baseURL:'https://pokeapi.co/api/v2/pokemon'
-})
+class ApiCall extends Component {
+    ...
+    componentDidMount(){
+        fetch('https://digimon-api.vercel.app/api/digimon')
+        .then(res => res.json())
 
-export default api
+    }
+}

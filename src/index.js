@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import HeroSection from './components/Hero.jsx';
-import Digimons from './components/ApiRender.jsx'
+import React from "react";
+import ReactDOM from "react-dom";
 
+import App from "./App";
 
-
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <Digimons/>
-    <HeroSection/>
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
-

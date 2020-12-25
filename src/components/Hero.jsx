@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import api from '../apiCall/Request.js'
 
 const StyledContainer = styled.div`
 width:100vw;

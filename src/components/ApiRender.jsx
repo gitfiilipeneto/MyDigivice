@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
 `
 const StyledCard = styled.div`
-  border-top: 2px solid black;
+  border: 1px solid black;
   margin: 5px;
   width: max-content;
   display: flex;
@@ -28,11 +28,12 @@ const Digimons = ({ digimons }) => {
         <div>
           <StyledCard>
             <h1>{digimon.name}</h1>
-            <img src = {digimon.img}></img>
+            <img src = {digimon.img} alt =''></img>
             <p>{digimon.level}</p>
           </StyledCard>
         </div>
       ))}
+
     </StyledContainer>
   )
 };

@@ -18,7 +18,7 @@ class App extends Component{
 
 
         render(){
-
+            
             return(
                 <Digimons digimons={this.state.digimons}/>
                 

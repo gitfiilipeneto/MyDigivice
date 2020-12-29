@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowLeft } from 'react-icons/fi'
+
 
 const StyledContainer = styled.div`
   width: 100vw;
@@ -11,7 +14,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
 `
 const StyledCard = styled.div`
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   margin: 5px;
   width: max-content;
   display: flex;
@@ -20,11 +23,28 @@ const StyledCard = styled.div`
   align-item: center;
   text-align:center;
 `
+const StyledImg = styled.img`
+  max-height: 300px;
+`
+
+const StyledButton = styled.button`
+  margin: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #f44336;
+  border: none;
+  text-align: center;
+  padding: 10px 25px;
+  color: white;
+  font-size:20px;
+
+`
 
 const Digimons = ({ digimons }) => {
   
   const[init,setInit] = useState(0)
+
   let end = init + 1
+  
   return (
 
     <StyledContainer>
@@ -33,18 +53,21 @@ const Digimons = ({ digimons }) => {
         <div>
           <StyledCard>
             <h1>{digimon.name}</h1>
-            <img src = {digimon.img} alt =''></img>
+            <StyledImg src = {digimon.img} alt =''></StyledImg>
             <p>{digimon.level}</p>
           </StyledCard>
           </div>
-          
+                    
       ))}
-        <button onClick={() => setInit(init - 1)}>
-          prev.
-        </button>
-        <button onClick={() => setInit(init + 1)}>
-          next!
-        </button>
+      <div>
+        <StyledButton  onClick={() => setInit(init - 1)  }>
+          prev
+        </StyledButton>
+        <StyledButton onClick={() => setInit(init + 1)}>
+          next
+        </StyledButton>
+      </div>
+
     </StyledContainer>
   )
 };

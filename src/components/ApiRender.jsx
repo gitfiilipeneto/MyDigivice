@@ -44,13 +44,21 @@ const Digimons = ({ digimons }) => {
   const[init,setInit] = useState(0)
 
   let end = init + 1
+
+  if(init == -1, end == 0){
+    return setInit(init + 1)
+    
+  }else{
   
   return (
+    
+ 
 
     <StyledContainer>
     
       {digimons.slice(init,end).map((digimon) => (
         <div>
+         
           <StyledCard>
             <h1>{digimon.name}</h1>
             <StyledImg src = {digimon.img} alt =''></StyledImg>
@@ -60,7 +68,7 @@ const Digimons = ({ digimons }) => {
                     
       ))}
       <div>
-        <StyledButton  onClick={() => setInit(init - 1)  }>
+        <StyledButton  onClick={() => setInit(init - 1)}>
           prev
         </StyledButton>
         <StyledButton onClick={() => setInit(init + 1)}>
@@ -70,6 +78,7 @@ const Digimons = ({ digimons }) => {
 
     </StyledContainer>
   )
+}
 };
 
 export default Digimons

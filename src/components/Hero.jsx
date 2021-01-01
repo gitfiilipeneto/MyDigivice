@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ApiCall from './TesteRequisicao'
 
 const StyledContainer = styled.div`
 width:100vw;
@@ -17,9 +18,10 @@ font-size: 96px;
 const HeroSection = () => {
     return(
         <StyledContainer>
-            <styledH1>Oi</styledH1>
+
         </StyledContainer>
     )
 }
+ 
 
 export default HeroSection

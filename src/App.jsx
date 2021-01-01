@@ -15,17 +15,19 @@ class App extends Component{
             this.setState({digimons:data})
         })
         }
-
-
+        
+        
         render(){
             
             return(
                 <Digimons digimons={this.state.digimons}/>
                 
-            )
+                )
 
         }
     }
+                
 
-
-export default App
+export {
+    App
+}

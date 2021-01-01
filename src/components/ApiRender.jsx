@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { FiArrowRight } from 'react-icons/fi'
-import { FiArrowLeft } from 'react-icons/fi'
+
+
 
 
 const StyledContainer = styled.div`
@@ -45,7 +45,7 @@ const Digimons = ({ digimons }) => {
 
   let end = init + 1
 
-  if(init == -1, end == 0){
+  if(init === -1, end === 0){
     return setInit(init + 1)
     
   }else{

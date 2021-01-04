@@ -15,9 +15,11 @@ const styledH1 = styled.h1`
 font-size: 96px;
 
 `
+
 const HeroSection = () => {
     return(
         <StyledContainer>
+            
 
         </StyledContainer>
     )

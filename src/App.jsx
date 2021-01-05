@@ -11,22 +11,17 @@ class App extends Component{
         fetch('https://digimon-api.vercel.app/api/digimon/')
         .then(response => response.json())
         .then((data) => {
-            console.log(data)
             this.setState({digimons:data})
         })
         }
-        
         
         render(){
             
             return(
                 <Digimons digimons={this.state.digimons}/>
-                
                 )
-
         }
-    }
-                
+    }                
 
 export {
     App

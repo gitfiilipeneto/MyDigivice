@@ -18,15 +18,18 @@ font-size: 96px;
 
 const HeroSection = () => {
     const [list,setList] = useState([])
-    useEffect(() => {
-        let mounted = true;
-        GetDigimons()
-        .then( items => {if (mounted){
-            setList(items)
-        }
-    })
-    return () => mounted = false
-},[])
+//     useEffect(() => {
+//         let mounted = true;
+//         GetDigimons()
+//         .then( items => {if (mounted){
+//             setList(items)
+//         }
+//     })
+//     return () => mounted = false
+// },[])
+    GetDigimons()
+    .then(itens => {setList(itens)})
+
 return(
     <div>
         <ul>

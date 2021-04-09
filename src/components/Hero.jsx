@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import GetDigimons from '../apiCall/ApiCall'
 import { StyledButton, StyledCard, StyledContainer, StyledImg } from '../resources/DefaultStyles'
 
 
-const styledH1 = styled.h1`
-font-size: 96px;
-`
-
 const HeroSection = () => {
 
     const [digimons, setDigimons] = useState([])
+    
+    useEffect(() => {
+        GetDigimons()
+        .then(dataReturn => { setDigimons(dataReturn) })
+    }, [])
 
-    GetDigimons()
-        .then(itens => { setDigimons(itens) })
 
     const [init, setInit] = useState(0)
 
@@ -32,7 +31,7 @@ const HeroSection = () => {
 
                         <StyledCard>
                             <h1>{digimon.name}</h1>
-                            <StyledImg src={digimon.img} alt=''></StyledImg>
+                            <StyledImg src={digimon.img} alt={digimon.name}></StyledImg>
                             <p>{digimon.level}</p>
                         </StyledCard>
                     </div>

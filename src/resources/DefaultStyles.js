@@ -1,10 +1,6 @@
-import React, { useState } from 'react'
 import styled from 'styled-components'
 
-
-
-
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   // width: 100vw;
   // max-width: 100%;
   height: auto;
@@ -13,21 +9,21 @@ const StyledContainer = styled.div`
   align-items: center;
   flex-direction: column;
 `
-const StyledCard = styled.div`
+export const StyledCard = styled.div`
   border-bottom: 1px solid black;
   margin: 5px;
   width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   text-align:center;
 `
-const StyledImg = styled.img`
+export const StyledImg = styled.img`
   max-height: 300px;
 `
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   margin: 10px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   background-color: #f44336;
@@ -36,27 +32,5 @@ const StyledButton = styled.button`
   padding: 10px 25px;
   color: white;
   font-size:20px;
-
 `
 
-const Digimons = ({ digimons }) => {
-  
-  const[init,setInit] = useState(0)
-
-  let end = init + 1
-
-  if(init === -1, end === 0){
-    return setInit(init + 1)
-    
-  }else{
-  
-  return (
-    
- 
-
-
-  )
-}
-};
-
-export default Digimons

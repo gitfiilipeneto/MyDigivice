@@ -1,28 +1,13 @@
-import React, { Component } from 'react'
 
-import Digimons from './components/ApiRender'
+import React, {useState} from 'react'
+import HeroSection from './components/Hero'
 
-class App extends Component{
-    state = {
-        digimons:[{name:'loading'}]
-    }
 
-    componentDidMount(){
-        fetch('https://digimon-api.vercel.app/api/digimon/')
-        .then(response => response.json())
-        .then((data) => {
-            this.setState({digimons:data})
-        })
-        }
-        
-        render(){
-            
-            return(
-                <Digimons digimons={this.state.digimons}/>
-                )
-        }
-    }                
-
-export {
-    App
+const App = () => {
+    
+    return (
+        <HeroSection/>
+    )
 }
+
+export default App

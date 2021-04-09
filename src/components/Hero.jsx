@@ -1,5 +1,4 @@
-import {useEffect, useState} from 'react'
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
 import GetDigimons from '../apiCall/ApiCall'
 
@@ -17,23 +16,15 @@ font-size: 96px;
 `
 
 const HeroSection = () => {
-    const [list,setList] = useState([])
-//     useEffect(() => {
-//         let mounted = true;
-//         GetDigimons()
-//         .then( items => {if (mounted){
-//             setList(items)
-//         }
-//     })
-//     return () => mounted = false
-// },[])
+    const [digimons,setDigimons] = useState([])
+
     GetDigimons()
-    .then(itens => {setList(itens)})
+    .then(itens => {setDigimons(itens)})
 
 return(
     <div>
         <ul>
-            {list.map(digimon => <li key = {digimon.name}>{digimon.name}</li>)}
+            {digimons.map(digimon => <li key = {digimon.name}>{digimon.name}</li>)}
         </ul>
     </div>
 )

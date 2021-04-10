@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
 export const StyledContainer = styled.div`
-  // width: 100vw;
-  // max-width: 100%;
-  height: auto;
+  width: 100vw; 
+  max-width: 100%;
+  height: 100vh;
+  /* height: ; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `
+
 export const StyledCard = styled.div`
   border-bottom: 1px solid black;
   margin: 5px;
@@ -21,6 +23,10 @@ export const StyledCard = styled.div`
 `
 export const StyledImg = styled.img`
   max-height: 300px;
+
+  @media(max-width: 800px) {
+    max-height: 250px;
+  }
 `
 
 export const StyledButton = styled.button`

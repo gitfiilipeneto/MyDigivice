@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import GetDigimons from '../apiCall/ApiCall'
 import { StyledButton, StyledCard, StyledContainer, StyledImg } from '../resources/DefaultStyles'
 

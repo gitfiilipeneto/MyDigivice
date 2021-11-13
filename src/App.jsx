@@ -1,12 +1,14 @@
-
-import React, {useState} from 'react'
+import DigimonCard from './components/DigimonsCards'
 import HeroSection from './components/Hero'
+import ListDigimonCards from './components/ListDigimonsCards'
+
 
 
 const App = () => {
     
     return (
-        <HeroSection/>
+        // <HeroSection/>
+        <ListDigimonCards/>
     )
 }
 

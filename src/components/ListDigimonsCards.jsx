@@ -1,19 +1,10 @@
 // a component to list All digimons inside cards
 // put a container
 import { Container } from "@mui/material";
-import { useState, useEffect } from "react";
-import GetDigimons from "../apiCall/ApiCall";
+import { Box } from "@mui/system";
 import DigimonCard from "./DigimonsCards";
 
-const ListDigimonCards = () => {
-  const [allDigimons, setDigimons] = useState([]);
-
-  useEffect(() => {
-    GetDigimons().then((allDigimonsArray) => {
-      setDigimons(allDigimonsArray);
-    });
-  }, []);
-  
+const ListDigimonCards = ({ allDigimons }) => {
   let digimonMap = allDigimons.map((digimon) => {
     return (
       <DigimonCard
@@ -25,7 +16,9 @@ const ListDigimonCards = () => {
   });
   return (
     <Container fixed>
-      <>{digimonMap}</>
+      <Box m="auto" justifyContent="center">
+        {digimonMap}
+      </Box>
     </Container>
   );
 };

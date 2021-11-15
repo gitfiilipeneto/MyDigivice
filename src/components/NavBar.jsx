@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import searchFunction from '../resources/searchFunction';
+import { useState } from 'react';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,6 +54,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+
+  const [searchParams, setSearchparams] = useState('')
+  
+  const handleSerachparam = event => {
+    searchFunction(event.target.value)
+    setSearchparams(event.target.value)
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -73,13 +83,18 @@ export default function NavBar() {
           >
             My digivice
           </Typography>
-          <Search>
+          <Search
+         
+          >
+            
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Digimon search"
               inputProps={{ 'aria-label': 'search' }}
+              value={searchParams}
+              onKeyPress={handleSerachparam}
             />
           </Search>
         </Toolbar>

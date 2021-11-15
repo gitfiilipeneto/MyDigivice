@@ -13,6 +13,7 @@ const ListDigimonCards = () => {
       setDigimons(allDigimonsArray);
     });
   }, []);
+  
   let digimonMap = allDigimons.map((digimon) => {
     return (
       <DigimonCard

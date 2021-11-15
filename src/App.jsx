@@ -1,13 +1,15 @@
-
-import React, {useState} from 'react'
-import HeroSection from './components/Hero'
-
+import React, { useEffect, useState } from "react";
+import GetDigimons from "./apiCall/ApiCall";
+import ListDigimonCards from "./components/ListDigimonsCards";
 
 const App = () => {
-    
-    return (
-        <HeroSection/>
-    )
-}
+  useEffect(() => {
+    GetDigimons().then((allDigimonnArray) => setAllDigimons(allDigimonnArray));
+  }, []);
 
-export default App
+  const [allDigimons, setAllDigimons] = useState([]);
+
+  return <ListDigimonCards allDigimons={allDigimons} />;
+};
+
+export default App;

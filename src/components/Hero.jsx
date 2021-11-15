@@ -9,7 +9,7 @@ const HeroSection = () => {
     
     useEffect(() => {
         GetDigimons()
-        .then(dataReturn => { setDigimons(dataReturn) })
+        .then(allDigimonsArray => { setDigimons(allDigimonsArray) })
     }, [])
 
 

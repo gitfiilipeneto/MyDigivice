@@ -1,7 +1,6 @@
 // a component to list All digimons inside cards
 // put a container
 import { Container } from "@mui/material";
-import { Box } from "@mui/system";
 import { useState, useEffect } from "react";
 import GetDigimons from "../apiCall/ApiCall";
 import DigimonCard from "./DigimonsCards";

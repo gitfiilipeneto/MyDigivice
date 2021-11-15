@@ -17,7 +17,7 @@ const DigimonCard = ({
   digimonStatusLevel,
 }) => {
   return (
-    <Card sx={{ maxWidth: 345, margin: "15px" }}>
+    <Card sx={{ maxWidth: 345, margin: "15px", display: 'inline-block' }}>
       <CardHeader title={digimonName} subheader={digimonStatusLevel} />
       <CardMedia
         component="img"

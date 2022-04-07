@@ -17,7 +17,7 @@ const ListDigimonCards = ({ allDigimons = [] }, searchParams) => {
     setFilteredDigimons(filteredDigimonsList);
   }, [searchParamContext, allDigimons]);
 
-  console.log(filteredDigimons);
+
   return (
     <Container fixed>
       <Box m="auto" justifyContent="center">

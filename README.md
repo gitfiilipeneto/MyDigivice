@@ -1,15 +1,16 @@
-Using in this APP :
+# Using in this APP :
 - Fetch data using fetch
 - react Hooks {useState, UseEffect, useContext}
-- some ui lib (I.E here using MAterialUI)
+- some ui lib (I.E here using MaterialUI and some CSSinJS like StyledComponents)
 -Styled Components
 - react router dom
 
 https://my-digivice-c39uoxylc-gitfiilipeneto.vercel.app
- - first version using class components
+ - **first version using class components**
+ 
  
  https://my-digivice.vercel.app/
- - On going Version
+ - **On going Version**
  
  
  My nexts steps 

@@ -1,15 +1,15 @@
-- Conteudos Abordados - 
--- Requisições Ajax
--- react Hooks {useState, UseEffect}
--- um pouquinho de bootstrap
--- Styled Components
--- react router dom
+Using in this APP :
+- Fetch data using fetch
+- react Hooks {useState, UseEffect, useContext}
+- some ui lib (I.E here using MAterialUI)
+-Styled Components
+- react router dom
 
 https://my-digivice-c39uoxylc-gitfiilipeneto.vercel.app
- -- first version using class components
+ - first version using class components
  
  https://my-digivice.vercel.app/
- --On going Version
+ - On going Version
  
  
  My nexts steps 

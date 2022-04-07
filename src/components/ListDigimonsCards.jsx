@@ -24,13 +24,16 @@ const ListDigimonCards = ({ allDigimons = [] }, searchParams) => {
         {filteredDigimons.length === 0
           ? allDigimons.map((digimon) => (
               <DigimonCard
+                key={digimon.name}
                 digimonName={digimon.name}
                 digimonImage={digimon.img}
                 digimonStatusLevel={digimon.level}
               />
             ))
           : filteredDigimons.map((digimon) => (
-              <DigimonCard digimonName={digimon.name}
+              <DigimonCard 
+              key={digimon.name}
+              digimonName={digimon.name}
               digimonImage={digimon.img}
               digimonStatusLevel={digimon.level} />
             ))}

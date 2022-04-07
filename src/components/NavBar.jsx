@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { SearchContext } from "../context/searchParamContext";
 
 const Search = styled("div")(({ theme }) => ({
@@ -56,11 +56,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const NavBar = () => {
   
   const [searchParamsNavBar, setSearchparamsNavBar] = useContext(SearchContext)
-  
-  const handleSerachparam = (event) => {
-    setSearchparamsNavBar(event.target.value);
-  
-  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -91,7 +86,7 @@ const NavBar = () => {
                 placeholder="Digimon search"
                 inputProps={{ "aria-label": "search" }}
                 value={searchParamsNavBar}
-                onChange={(event) => setSearchparamsNavBar(event.target.value)}
+                onChange={(event) => setSearchparamsNavBar(event.target.value.toLocaleLowerCase())}
               />
             </Search>
         </Toolbar>

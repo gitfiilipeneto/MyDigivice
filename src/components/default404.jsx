@@ -1,7 +1,7 @@
 import React from 'react'
 import img404 from '../images/404img.png'
 import styled from 'styled-components'
-import { StyledContainer, StyledImg } from '../resources/DefaultStyles'
+import { StyledContainer } from '../resources/DefaultStyles'
 
 const Styled404container = styled(StyledContainer)`
     
@@ -23,7 +23,7 @@ const Ops404 = () => {
     return (
         <Styled404container>
             <div>
-                <img src={img404} />
+                <img src={img404} alt="404"/>
             </div>
             <div>
 

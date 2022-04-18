@@ -56,6 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const NavBar = () => {
   
   const [searchParamsNavBar, setSearchparamsNavBar] = useContext(SearchContext)
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -83,7 +84,7 @@ const NavBar = () => {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Digimon search"
+                placeholder="Digimon Name"
                 inputProps={{ "aria-label": "search" }}
                 value={searchParamsNavBar}
                 onChange={(event) => setSearchparamsNavBar(event.target.value.toLocaleLowerCase())}

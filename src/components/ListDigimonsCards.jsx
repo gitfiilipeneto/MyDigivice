@@ -1,12 +1,11 @@
-// a component to list All digimons inside cards
-// put a container
+
 import { useContext, useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
 import DigimonCard from "./DigimonsCards";
 import { SearchContext } from "../context/searchParamContext";
 
-const ListDigimonCards = ({ allDigimons = [] }, searchParams) => {
+const ListDigimonCards = ({ allDigimons = [] }) => {
   const [filteredDigimons, setFilteredDigimons] = useState(allDigimons);
   const [searchParamContext] = useContext(SearchContext);
 

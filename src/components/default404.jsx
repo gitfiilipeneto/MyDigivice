@@ -27,7 +27,7 @@ const Ops404 = () => {
             </div>
             <div>
 
-            <h1>ops! 404</h1>
+            <h2>ops! page not found!</h2>
             </div>
 
         </Styled404container>
